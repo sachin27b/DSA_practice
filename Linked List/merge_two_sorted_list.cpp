@@ -24,7 +24,8 @@ public:
         {
             return h2;
         }
-
+        /*Below if else statement is to save the smallest element as head which is res.
+        And start comparing the elements from the next of res and the other list.*/
         if(h1 -> val < h2 -> val)
         {
             res = h1;
@@ -42,7 +43,7 @@ public:
         {
             if(h1 -> val < h2 -> val)
             {
-                temp -> next = h1;
+                temp -> next = h1; 
                 temp = h1;
                 h1 = h1 -> next;
             }
@@ -53,6 +54,8 @@ public:
                 temp = h2;
                 h2 = h2 -> next;
             }
+            /*Temp is always saving the previous smallest node because in the next iteration that element
+            has to be pointedd to the next smallest element.*/
         }
         
         if(h2 == NULL)
